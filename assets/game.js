@@ -1,12 +1,15 @@
+
 var Game =  {
 	_display: null,
     _currentScreen: null,
-    _screenWidth: 80,
-    _screenHeight: 24,
+    _screenWidth: 100, //80
+    _screenHeight: 32, //24
 	init: function() {
         // Any necessary initialization will go here.
         this._display = new ROT.Display({width: this._screenWidth,
-                                         height: this._screenHeight + 1});
+                                         height: this._screenHeight + 1,
+                                         tileWidth: 32,
+                                         tileHeight: 32});
         // Create a helper function for binding to an event
         // and making it send it to the screen
         var game = this; // So that we don't lose this
@@ -70,3 +73,14 @@ window.onload = function() {
         Game.switchScreen(Game.Screen.startScreen);
     }
 };
+
+// window.onload = function() {
+// //     var canvas = document.querySelector('canvas');
+// //     var context = canvas.getContext('2d');
+// //    context.shadowBlur=15;
+// //    context.shadowColor='#000'; 
+// //    context.shadowOffsetX=10; // offset along X axis
+// //    context.shadowOffsetY=-10;  // offset along Y axis
+// //    context.fillStyle='#9933FF'; 
+// //    context.fillRect(70,20,400,200); //rectangle  
+// };
